@@ -1,1 +1,18 @@
-<p>sidenav works!</p>
+<div class="btn" (click)="currentPage = 'main'">Main</div>
+<div class="btn" (click)="currentPage = 'about'">About</div>
+<div class="btn" (click)="currentPage = 'contacts'">Contacts</div>
+
+<div [ngSwitch]="currentPage">
+  <div *ngSwitchCase="'main'">
+    <app-main></app-main>
+  </div>
+  <div *ngSwitchCase="'about'">
+    <app-about></app-about>
+  </div>
+  <div *ngSwitchCase="'contacts'">
+    <app-contacts></app-contacts>
+  </div>
+  <div *ngSwitchDefault>
+    <p>Nothing here...</p>
+  </div>
+</div>

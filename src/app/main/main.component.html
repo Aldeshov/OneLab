@@ -1,0 +1,11 @@
+<p>List:</p>
+<input type="text" [(ngModel)]="search"/>
+&nbsp;
+<input type="button" value="Clear" (click)="search = ''"/>
+
+<ol>
+  <li *ngFor="let item of list">
+    <p *ngIf="item.startsWith(search)">{{item}}</p>
+    <p *ngIf="!item.startsWith(search)">·····</p>
+  </li>
+</ol>

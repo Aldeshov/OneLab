@@ -2,17 +2,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { BadgeComponent } from './badge/badge.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { MainComponent } from './main/main.component';
+import { AboutComponent } from './about/about.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    HeaderComponent
+    BadgeComponent,
+    MainComponent,
+    AboutComponent,
+    ContactsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+.btn {
+  width: 128px;
+  height: 32px;
+  user-select: none;
+  background: #EEEEEE;
+  text-align: center;
+  margin: 5px;
+  border: 1px solid #DDDDDD;
+}
+
+.btn:hover {
+  background: #AAAAAA;
+  cursor: pointer;
+}
