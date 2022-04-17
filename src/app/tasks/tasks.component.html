@@ -1,0 +1,9 @@
+<h3>Pipe: Active tasks</h3>
+<div *ngFor="let task of taskList">
+  <span>{{ task | activeTask }}</span>
+</div>
+
+<br/>
+
+<h3>Directive: Zoom</h3>
+<span appZoom [zoomEffect]="zoom">target (zoomed: x{{zoom}})</span>

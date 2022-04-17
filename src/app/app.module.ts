@@ -8,6 +8,9 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import {FormsModule} from "@angular/forms";
+import { ActiveTaskPipe } from './shared/pipes/active-task.pipe';
+import { TasksComponent } from './tasks/tasks.component';
+import { ZoomDirective } from './shared/directives/zoom.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import {FormsModule} from "@angular/forms";
     BadgeComponent,
     MainComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    ActiveTaskPipe,
+    TasksComponent,
+    ZoomDirective
   ],
   imports: [
     BrowserModule,
