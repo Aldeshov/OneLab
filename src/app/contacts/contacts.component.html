@@ -1,5 +1,47 @@
-<p [class]="green">Contacts works!</p>
+<!-- Second hw -->
+<!--<p [class]="green">Contacts works!</p>-->
 
-<div [style.font-weight]="800" [ngStyle]="{ 'color': 'grey' }">
-  + 7 (777) 777 77 77
+<!--<div [style.font-weight]="800" [ngStyle]="{ 'color': 'grey' }">-->
+<!--  + 7 (777) 777 77 77-->
+<!--</div>-->
+
+
+<h3>Contacts form</h3>
+
+<form method="post" style="padding: 10px; margin: 20px; border: 1px solid gray" [formGroup]="contactsForm">
+  <div style="margin: 20px">
+    <label for="first_name">First name:</label>
+    <input id="first_name" type="text" formControlName="first_name">
+    <div *ngIf="contactsForm.touched">
+      <div style="color: darkred" *ngIf="fieldCtrl(contactsForm, 'first_name')?.required">
+        Обязательное поле
+      </div>
+
+      <div style="color: darkred" *ngIf="fieldCtrl(contactsForm, 'first_name')?.minlength">
+        Минимальная длина должно быть 3 символов
+      </div>
+    </div>
+  </div>
+  <div style="margin: 20px">
+    <label for="last_name">Last name:</label>
+    <input id="last_name" type="text" formControlName="last_name">
+  </div>
+  <div style="margin: 20px">
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email">
+    <div *ngIf="contactsForm.touched">
+      <div style="color: darkred" *ngIf="fieldCtrl(contactsForm, 'email')?.required">
+        Обязательное поле
+      </div>
+    </div>
+  </div>
+  <div style="margin: 20px">
+    <label for="phone_number">Phone:</label>
+    <input id="phone_number" type="number" formControlName="phone_number">
+  </div>
+</form>
+
+<div>
+  <button type="submit" (click)="submit()">Submit</button>
+  <button type="submit" style="margin-left: 10px" (click)="clear()">Clear data</button>
 </div>
